@@ -14,6 +14,9 @@ Reinventing the ES6 `import` keyword
 
 (We have to do this because node doesn't support `import` [yet])
 
+# Installation
+`npm install importme`
+
 # How to use?
 
 First require `_import` and `_export` functions
