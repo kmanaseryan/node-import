@@ -28,9 +28,9 @@ Then add in the your route module (or the module
 which runs first when you start your app) your desired modules:
 ```javascript
 _export({
-    foo: './foo.js',
-    bar: './bar.js',
-    baa: './haa/baa.js'
+    foo: require('./foo.js'),
+    bar: require('./bar.js'),
+    baa: require('./haa/baa.js')
 })
 ```
 
@@ -57,7 +57,7 @@ module.exports = {
 let _export = require('importme').export;
 
 _export({
-    foo: './foo.js'
+    foo: require('./foo.js')
 })
 ```
 ```javascript
