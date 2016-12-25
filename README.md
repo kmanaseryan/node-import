@@ -18,27 +18,27 @@ Reinventing the ES6 `import` keyword
 
 First require `_import` and `_export` functions
 ```javascript
-let _import = require('importme').import;
-let _export = require('importme').export;
+let _import = require('importme').import
+let _export = require('importme').export
 ```
 Then add in the your route module (or the module
 which runs first when you start your app) your desired modules:
 ```javascript
 _export({
-    foo: "./foo.js",
-    bar: "./bar.js",
-    baa: "./haa/baa.js
+    foo: './foo.js',
+    bar: './bar.js',
+    baa: './haa/baa.js'
 })
 ```
 
 then import your modules from anywhere:
 ```javascript
-let foo = _import('foo');
-let baa = _import('baa');
+let foo = _import('foo')
+let baa = _import('baa')
 ```
 You can use with ES6 destructuring assignment syntax:
 ```javascript
-let {foo, bar} = _import('foo', 'bar');
+let {foo, bar} = _import('foo', 'bar')
 ```
 Or even you can use `from` like syntax, i.e. import functions from the module
 ```javascript
@@ -54,17 +54,15 @@ module.exports = {
 let _export = require('importme').export;
 
 _export({
-    foo: "./foo.js",
-    bar: "./bar.js",
-    baa: "./haa/baa.js
+    foo: './foo.js'
 })
 ```
 ```javascript
 //a module in some directory
-let _import = require('importme').import;
+let _import = require('importme').import
 
-let print = _import('print').from('foo');
-print(); //I'm imported function from foo module
+let print = _import('print').from('foo')
+print() //I'm imported function from foo module
 ```
 
 #
